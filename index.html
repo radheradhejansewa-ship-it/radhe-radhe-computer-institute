@@ -1,0 +1,178 @@
+<html>
+<title> Radhe Radhe Computer Institute</title>
+<head>
+<style>
+body{
+margin:0;
+font-family: Arial, sans-serif;
+backgraound-color: #f0f6ff;
+text-align: center;
+}
+nav{
+background-color: #183153;
+padding: 18px 10x;
+}
+nav a{color: white;
+text-decoration: none;
+margin:0 12px;
+font- size: 18px;
+font-weight: bold;
+}
+h1 {
+    background-color: #183153;
+    color: white;
+    padding: 25px 10px;
+    margin: 0;
+}
+
+.welcome {
+    background-color: white;
+    margin: 30px; auto;
+    padding: 35px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #cccccc;
+    max-width: 800px;
+}
+h2{color: #c56a32;
+font-size: 28px;
+}
+p{color: #183153;
+font-size: 20px;
+line-height:1.8;
+}
+</style>
+</head>
+<body>
+<nav>
+<a href="#">Home</a>
+<a href="#">About Us</a>
+<a href="#">Courses</a>
+<a href="#">Gallery</a>
+<a href="#">Admission</a>
+<a href="#">notice</a>
+<a href="#">Contact Us</a>
+</nav>
+<h1> Radhe Radhe Computer Institute</h1> 
+<div class="welcome">
+<h2> हमारे कंप्यूटर संस्थान में आप का स्वागत है </h2>
+<p> यहाँ कंप्यूटर की शिक्षा सरल तरीके स्व सीखे </p>
+</div>
+<div class="welcome">
+    <h2>हमारे कंप्यूटर कोर्स</h2>
+    <p>💻 बेसिक कंप्यूटर कोर्स</p>
+    <p>⌨️ हिंदी और इंग्लिश टाइपिंग</p>
+    <p>📊 MS Office कोर्स</p>
+    <p>🌐 इंटरनेट और ऑनलाइन सेवाएँ</p>
+    <p>🧾 Tally कोर्स</p>
+</div>
+<div class="welcome">
+    <h2>हमारी सुविधाएँ</h2>
+    <p>प्रैक्टिकल कंप्यूटर शिक्षा</p>
+    <p>अनुभवी शिक्षक</p>
+    <p>हर विद्यार्थी पर विशेष ध्यान</p>
+</div>
+<div class="welcome">
+    <h2>हमसे संपर्क करें</h2>
+    <p>Radhe Radhe Computer Institute</p>
+    <p>प्रवेश और कोर्स की जानकारी के लिए संपर्क करें।</p>
+
+    <a href="https://wa.me/8887882063"
+       target="_blank"
+       style="background-color: #25D366; color: white;
+       padding: 12px 20px; text-decoration: none;
+       border-radius: 8px; display: inline-block;">
+       WhatsApp पर संपर्क करें
+    </a>
+</div>
+<div class="welcome">
+    <h2>हमारे कोर्स और फीस</h2>
+
+    <p>Basic Computer - फीस संस्थान से पूछें</p>
+    <p>Hindi & English Typing - फीस संस्थान से पूछें</p>
+    <p>MS Office - फीस संस्थान से पूछें</p>
+    <p>Tally - फीस संस्थान से पूछें</p>
+</div>
+<div class="welcome">
+    <h2>Online Admission Form</h2>
+    <p>राधे राधे कंप्यूटर इंस्टीट्यूट</p>
+
+    <form id="admissionForm">
+        <p>विद्यार्थी का पूरा नाम</p>
+        <input type="text" id="studentName"
+        placeholder="अपना नाम लिखें" required>
+
+        <p>मोबाइल नंबर</p>
+        <input type="tel" id="mobile"
+        placeholder="10 अंकों का मोबाइल नंबर"
+        pattern="[0-9]{10}" required>
+
+        <p>पिता का नाम</p>
+        <input type="text" id="fatherName"
+        placeholder="पिता का नाम लिखें" required>
+
+        <p>पता</p>
+        <textarea id="address"
+        placeholder="अपना पता लिखें" required></textarea>
+
+        <p>कोर्स चुनें</p>
+        <select id="course" required>
+            <option value="">कोर्स चुनें</option>
+            <option>Basic Computer</option>
+            <option>Hindi Typing</option>
+            <option>English Typing</option>
+            <option>MS Office</option>
+            <option>Tally</option>
+        </select>
+
+        <br><br>
+        <button type="submit">WhatsApp पर आवेदन भेजें</button>
+    </form>
+</div>
+
+<style>
+#admissionForm input,
+#admissionForm textarea,
+#admissionForm select {
+    width: 90%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 5px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+#admissionForm button {
+    background-color: #25D366;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+</style>
+
+<script>
+document.getElementById("admissionForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("studentName").value.trim();
+    const mobile = document.getElementById("mobile").value.trim();
+    const father = document.getElementById("fatherName").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const course = document.getElementById("course").value;
+
+    const message =
+        "Online Admission Enquiry%0A" +
+        "Student Name: " + encodeURIComponent(name) + "%0A" +
+        "Mobile: " + encodeURIComponent(mobile) + "%0A" +
+        "Father Name: " + encodeURIComponent(father) + "%0A" +
+        "Address: " + encodeURIComponent(address) + "%0A" +
+        "Course: " + encodeURIComponent(course);
+
+    window.open("https://wa.me/918887882063?text=" + message, "_blank");
+});
+</script>
+</body>
+</html>
